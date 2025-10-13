@@ -1,0 +1,77 @@
+version: "3.8"
+
+x-args: &args
+  PROJECT_NAME: ${PROJECT_NAME:-web}
+  NEXT_PUBLIC_CHAIN_TYPE: ${NEXT_PUBLIC_CHAIN_TYPE:-}
+  TURBO_TEAM: ${TURBO_TEAM:-}                         # for Turborepo remote cache
+  TURBO_TOKEN: ${TURBO_TOKEN:-}                       # for Turborepo remote cache
+  NEXT_PUBLIC_SENTRY_DSN: ${NEXT_PUBLIC_SENTRY_DSN:-} # for Sentry.io
+  SENTRY_AUTH_TOKEN: ${SENTRY_AUTH_TOKEN:-}           # for Sentry.io
+
+x-build: &build
+  context: .
+  args: *args
+  target: runner
+
+x-web: &web
+  build: *build
+  restart: always
+  platform: linux/amd64
+  ports:
+    - ${PORT:-3000}:${PORT:-3000}
+  networks:
+    - app_network
+  env_file: .env
+
+
+
+
+services:
+  # default web
+  web: *web
+  # for mac with M1/M2 chip
+  web-arm64v8:
+    <<: *web
+    build:
+      <<: *build
+      args:
+        <<: *args
+        BASE_IMAGE: arm64v8/node:18
+
+
+  postgres:
+#    image: postgres:12
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: callisto
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  hasura:
+#    image: hasura/graphql-engine:v2.0.4
+    image: hasura/graphql-engine:v2.48.6
+    container_name: hasura
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://root:password@postgres:5432/callisto
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_ADMIN_SECRET: password      
+      HASURA_GRAPHQL_DEV_MODE: "true"
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
+      ACTION_BASE_URL: http://localhost:3000
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  app_network:

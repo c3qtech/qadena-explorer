@@ -1,0 +1,79 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"],
+      "env": [
+        "NEXT_PUBLIC_BANNERS_JSON",
+        "NEXT_PUBLIC_COINZILLA_ZONE",
+        "NEXT_PUBLIC_GRAPHQL_URL",
+        "NEXT_PUBLIC_GRAPHQL_WS",
+        "NEXT_PUBLIC_MATOMO_SITE_ID",
+        "NEXT_PUBLIC_MATOMO_URL",
+        "NEXT_PUBLIC_RPC_WEBSOCKET"
+      ]
+    },
+    "clean": {
+      "cache": false,
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "outputs": [],
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["^build"],
+      "env": ["PORT"],
+      "outputs": [],
+      "persistent": true
+    },
+    "ts-check": {
+      "outputs": []
+    },
+    "lint": {
+      "outputs": [".next/cache/eslint/**"]
+    },
+    "test": {
+      "outputs": ["coverage/**"]
+    },
+    "e2e": {
+      "env": ["PORT"],
+      "outputs": []
+    },
+    "graphql:codegen": {
+      "outputs": []
+    }
+  },
+  "globalEnv": [
+    "BASE_PATH",
+    "NEXT_PUBLIC_APP_NAME",
+    "NEXT_PUBLIC_CHAIN_TYPE",
+    "NEXT_PUBLIC_KEPLR_CHAIN_ID",
+    "NEXT_PUBLIC_KEPLR_CUSTOM_CHAIN_INFO",
+    "NEXT_PUBLIC_KEPLR_LCD_URL",
+    "NEXT_PUBLIC_NETWORK_NAME",
+    "NEXT_PUBLIC_SENTRY_DSN",
+    "NEXT_PUBLIC_RELEASE",
+    "NEXT_PUBLIC_WC_BRIDGE_URL",
+    "NODE_ENV",
+    "npm_package_version",
+    "PORT",
+    "PROJECT_NAME",
+    "SENTRY_AUTH_TOKEN",
+    "SENTRY_ENVIRONMENT",
+    "SENTRY_PROJECT",
+    "SENTRY_ORG",
+    "SENTRY_URL",
+    "SITE_URL",
+    "VERCEL"
+  ],
+  "globalDependencies": [
+    ".env",
+    ".eslintrc.js",
+    ".gitignore",
+    ".yarnrc.yml",
+    "packages/shared-utils/**/*"
+  ]
+}

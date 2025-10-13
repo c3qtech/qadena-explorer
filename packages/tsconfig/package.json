@@ -1,0 +1,17 @@
+{
+  "name": "tsconfig",
+  "version": "0.3.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/esprima": "^4.0.3",
+    "esprima": "^4.0.1"
+  }
+}

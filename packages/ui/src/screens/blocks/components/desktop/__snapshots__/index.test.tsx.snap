@@ -1,0 +1,463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
+.emotion-0 {
+  height: 100%;
+}
+
+.emotion-1 {
+  background: #FFFFFF;
+  height: 50px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1.odd {
+  background: #F8F8F8;
+}
+
+.emotion-1>* {
+  width: 100%;
+}
+
+.emotion-1 .MuiTypography-body1 {
+  white-space: nowrap;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+}
+
+.emotion-8 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  text-align: right;
+}
+
+.emotion-11 {
+  background: #FFFFFF;
+  height: 50px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #414141;
+}
+
+.emotion-11.odd {
+  background: #F8F8F8;
+}
+
+.emotion-11>* {
+  width: 100%;
+}
+
+.emotion-11 .MuiTypography-body1 {
+  white-space: nowrap;
+}
+
+.emotion-12 {
+  margin: 0;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.5px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.emotion-18 {
+  margin: 0;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.5px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: right;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    onScroll={[Function]}
+    style={
+      {
+        "WebkitOverflowScrolling": "touch",
+        "direction": "ltr",
+        "height": 50,
+        "overflow": "auto",
+        "position": "relative",
+        "width": 600,
+        "willChange": "transform",
+      }
+    }
+  >
+    <div
+      style={
+        {
+          "height": 50,
+          "pointerEvents": undefined,
+          "width": 600,
+        }
+      }
+    >
+      <div
+        className="emotion-1"
+        style={
+          {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 90,
+          }
+        }
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 emotion-2"
+        >
+          height
+        </h4>
+      </div>
+      <div
+        className="emotion-1"
+        style={
+          {
+            "height": 50,
+            "left": 90,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 150,
+          }
+        }
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 emotion-2"
+        >
+          proposer
+        </h4>
+      </div>
+      <div
+        className="emotion-1"
+        style={
+          {
+            "height": 50,
+            "left": 240,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 150,
+          }
+        }
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 emotion-2"
+        >
+          hash
+        </h4>
+      </div>
+      <div
+        className="emotion-1"
+        style={
+          {
+            "height": 50,
+            "left": 390,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 90,
+          }
+        }
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 MuiTypography-alignRight emotion-8"
+        >
+          txs
+        </h4>
+      </div>
+      <div
+        className="emotion-1"
+        style={
+          {
+            "height": 50,
+            "left": 480,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 120,
+          }
+        }
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 MuiTypography-alignRight emotion-8"
+        >
+          time
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div
+    className="scrollbar"
+    onScroll={[Function]}
+    style={
+      {
+        "WebkitOverflowScrolling": "touch",
+        "direction": "ltr",
+        "height": 550,
+        "overflow": "auto",
+        "position": "relative",
+        "width": 600,
+        "willChange": "transform",
+      }
+    }
+  >
+    <div
+      style={
+        {
+          "height": 100,
+          "pointerEvents": undefined,
+          "width": 600,
+        }
+      }
+    >
+      <div
+        className="odd emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 90,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 emotion-12"
+        >
+          <a
+            className="value"
+            href="/blocks/300"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            300
+          </a>
+        </div>
+      </div>
+      <div
+        className="odd emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 90,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 150,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 emotion-12"
+        >
+          <div
+            address="address"
+            id="AvatarName"
+            imageUrl=""
+            name="address"
+          />
+        </div>
+      </div>
+      <div
+        className="odd emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 240,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 150,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 emotion-12"
+        >
+          hash
+        </div>
+      </div>
+      <div
+        className="odd emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 390,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 90,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-alignRight emotion-18"
+        >
+          2
+        </div>
+      </div>
+      <div
+        className="odd emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 480,
+            "position": "absolute",
+            "right": undefined,
+            "top": 0,
+            "width": 120,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-alignRight emotion-18"
+        />
+      </div>
+      <div
+        className="emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "right": undefined,
+            "top": 50,
+            "width": 90,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 emotion-12"
+        >
+          <a
+            className="value"
+            href="/blocks/301"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            301
+          </a>
+        </div>
+      </div>
+      <div
+        className="emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 90,
+            "position": "absolute",
+            "right": undefined,
+            "top": 50,
+            "width": 150,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 emotion-12"
+        >
+          <div
+            address="address"
+            id="AvatarName"
+            imageUrl=""
+            name="address"
+          />
+        </div>
+      </div>
+      <div
+        className="emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 240,
+            "position": "absolute",
+            "right": undefined,
+            "top": 50,
+            "width": 150,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 emotion-12"
+        >
+          hash
+        </div>
+      </div>
+      <div
+        className="emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 390,
+            "position": "absolute",
+            "right": undefined,
+            "top": 50,
+            "width": 90,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-alignRight emotion-18"
+        >
+          2
+        </div>
+      </div>
+      <div
+        className="emotion-11"
+        style={
+          {
+            "height": 50,
+            "left": 480,
+            "position": "absolute",
+            "right": undefined,
+            "top": 50,
+            "width": 120,
+          }
+        }
+      >
+        <div
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-alignRight emotion-18"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

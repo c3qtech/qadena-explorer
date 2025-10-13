@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
+.emotion-0 .label {
+  color: #777777;
+}
+
+.emotion-0 .content {
+  margin-bottom: 16px;
+  display: block;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-0 .recipient {
+  margin-bottom: 16px;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 .recipient {
+    display: block;
+  }
+}
+
+.emotion-0 .amountRequested {
+  margin-bottom: 16px;
+  display: block;
+  padding: 0;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 .amountRequested {
+    display: block;
+    padding-left: 30px;
+  }
+}
+
+.emotion-1 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-bottom-width: thin;
+}
+
+.emotion-2 {
+  margin-top: 16px;
+  display: grid;
+}
+
+.emotion-2 p {
+  line-height: 1.8;
+}
+
+.emotion-2 ul {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (min-width:1280px) {
+  .emotion-2 ul {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.emotion-2 li {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (min-width:1280px) {
+  .emotion-2 li {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.emotion-2>* {
+  margin-bottom: 8px;
+}
+
+@media (min-width:1280px) {
+  .emotion-2>* {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width:1280px) {
+  .emotion-2 {
+    grid-template-columns: 200px auto;
+  }
+}
+
+.emotion-3 {
+  margin: 0;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.5px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+<div
+  className="emotion-0"
+  id="Box"
+>
+  <div
+    id="#10"
+    status="status"
+    title="title"
+  />
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth emotion-1"
+  />
+  <div
+    className="emotion-2"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1 label emotion-3"
+    >
+      type
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 value emotion-3"
+    />
+    <p
+      className="MuiTypography-root MuiTypography-body1 label emotion-3"
+    >
+      proposer
+    </p>
+    <div
+      address=""
+      id="Name"
+      name=""
+    />
+    <p
+      className="MuiTypography-root MuiTypography-body1 label emotion-3"
+    >
+      submitTime
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 value emotion-3"
+    >
+      2020-08-10 12:00:00
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 label emotion-3"
+    >
+      depositEndTime
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 value emotion-3"
+    >
+      2020-08-10 12:00:00
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 label emotion-3"
+    >
+      description
+    </p>
+    <div
+      id="Markdown"
+      markdown="description"
+    />
+  </div>
+</div>
+`;

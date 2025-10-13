@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: ProfileDetails/Connections/Desktop matches snapshot 1`] = `
+.emotion-0 {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.emotion-0 caption {
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  padding: 16px;
+  color: #414141;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.emotion-1 {
+  display: table-header-group;
+}
+
+.emotion-1 {
+  background-color: initial;
+}
+
+.emotion-2 {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+}
+
+.emotion-2.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.emotion-2.Mui-selected {
+  background-color: rgba(255, 131, 91, 0.08);
+}
+
+.emotion-2.Mui-selected:hover {
+  background-color: rgba(255, 131, 91, 0.12);
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(252, 252, 252, 1);
+  text-align: left;
+  padding: 16px;
+  color: #000000;
+}
+
+.emotion-3 {
+  border-bottom: none;
+  padding: 0 16px;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(252, 252, 252, 1);
+  text-align: right;
+  padding: 16px;
+  color: #000000;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-5 {
+  border-bottom: none;
+  padding: 0 16px;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.emotion-6 {
+  display: table-row-group;
+}
+
+.emotion-6 .MuiTableRow-root:nth-of-type(odd) {
+  background-color: #F8F8F8;
+}
+
+.emotion-6 .MuiTableCell-root {
+  color: #414141;
+}
+
+.emotion-8 {
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(252, 252, 252, 1);
+  text-align: left;
+  padding: 16px;
+  color: #000000;
+}
+
+.emotion-8 {
+  border-bottom: none;
+  padding: 0 16px;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.emotion-10 {
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgba(252, 252, 252, 1);
+  text-align: right;
+  padding: 16px;
+  color: #000000;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-10 {
+  border-bottom: none;
+  padding: 0 16px;
+  height: 50px;
+  font-size: 1rem;
+}
+
+<div>
+  <table
+    className="MuiTable-root emotion-0"
+    role={null}
+  >
+    <thead
+      className="MuiTableHead-root emotion-1"
+      role={null}
+    >
+      <tr
+        className="MuiTableRow-root MuiTableRow-head emotion-2"
+        role={null}
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-3"
+          scope="col"
+          style={
+            {
+              "width": "25%",
+            }
+          }
+        >
+          network
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium emotion-3"
+          scope="col"
+          style={
+            {
+              "width": "50%",
+            }
+          }
+        >
+          identifier
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-5"
+          scope="col"
+          style={
+            {
+              "width": "25%",
+            }
+          }
+        >
+          creationTime
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root emotion-6"
+      role={null}
+    >
+      <tr
+        className="MuiTableRow-root emotion-2"
+        role={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-8"
+          style={
+            {
+              "width": "25%",
+            }
+          }
+        >
+          NATIVE
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium emotion-8"
+          style={
+            {
+              "width": "50%",
+            }
+          }
+        >
+          <a
+            className="value"
+            href="/accounts/desmos1rzhewpmmdl72lhnxj6zmxr4v94f522s4ff2psv"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            desmos1rzhewpmmdl72lhnxj6zmxr4v94f522s4ff2psv
+          </a>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-10"
+          style={
+            {
+              "width": "25%",
+            }
+          }
+        >
+          2020-08-10 12:00:00
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root emotion-2"
+        role={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium emotion-8"
+          style={
+            {
+              "width": "25%",
+            }
+          }
+        >
+          EMONEY
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium emotion-8"
+          style={
+            {
+              "width": "50%",
+            }
+          }
+        >
+          emoney1wke3ev9ja6rxsngld75r3vppcpet94xxnh63ry
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-10"
+          style={
+            {
+              "width": "25%",
+            }
+          }
+        >
+          2020-08-10 12:00:00
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component: Avatar matches snapshot 1`] = `
+.emotion-0 {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #F8F8F8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+<span
+  className="emotion-0"
+>
+  <svg
+    data-jdenticon-value="123"
+    height="100%"
+    width="100%"
+  />
+</span>
+`;
+
+exports[`component: Avatar matches snapshot with imageUrl 1`] = `
+.emotion-0 {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #F8F8F8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-0 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.emotion-1 {
+  width: auto;
+  height: auto;
+}
+
+<span
+  className="emotion-0"
+>
+  <img
+    alt="address avatar"
+    className="emotion-1"
+    data-nimg="1"
+    decoding="async"
+    height={0}
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://s3.amazonaws.com/keybase_processed_uploads/f5b0771af36b2e3d6a196a29751e1f05_360_360.jpeg"
+    style={
+      {
+        "color": "transparent",
+      }
+    }
+    width={0}
+  />
+</span>
+`;

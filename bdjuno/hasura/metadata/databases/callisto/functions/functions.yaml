@@ -1,0 +1,3 @@
+- "!include public_messages_by_address.yaml"
+- "!include public_messages_by_type.yaml"
+- "!include public_messages_types_by_address.yaml"

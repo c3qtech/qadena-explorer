@@ -1,0 +1,11 @@
+table:
+  name: pruning
+  schema: public
+select_permissions:
+- permission:
+    allow_aggregations: false
+    columns:
+    - last_pruned_height
+    filter: {}
+    limit: 100
+  role: anonymous

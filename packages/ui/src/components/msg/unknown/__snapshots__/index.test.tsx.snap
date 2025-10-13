@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: TransactionDetails/Unknown matches snapshot 1`] = `
+.emotion-0 {
+  overflow: auto;
+  padding: 1rem;
+  margin: 0;
+  background: #F8F8F8;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 code {
+  white-space: pre-wrap;
+}
+
+<pre
+  className="emotion-0"
+>
+  <code>
+    {
+	"category": "others",
+	"type": "MsgUnknown",
+	"json": "{\\"hello\\":\\"world\\"}"
+}
+  </code>
+</pre>
+`;

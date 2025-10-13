@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 .button {
+  color: #414141;
+}
+
+.emotion-0 .button:hover {
+  cursor: pointer;
+}
+
+.emotion-1 {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media (max-width:1279.95px) {
+  .emotion-3 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-bottom-width: thin;
+}
+
+@media (min-width:1280px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-6 {
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width:1280px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+<div
+  className="emotion-0"
+  id="Box"
+>
+  <div
+    className="emotion-1"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h2 emotion-2"
+    >
+      latestBlocks
+    </h2>
+    <a
+      aria-label="see more blocks"
+      className="button"
+      href="/blocks"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      seeMore
+    </a>
+  </div>
+  <div
+    className="emotion-3"
+    id="Desktop"
+    items={
+      [
+        {
+          "hash": "D0243447726B8BD7AE94BF4F98E536A647959194E870AB8566CB833A3CC847F6",
+          "height": 379643,
+          "proposer": "desmosvaloper1h5f3dywec65v9qulxkmcv3e6yujyh3zm0ghhl3",
+          "timestamp": "2021-05-24T05:28:05.839448",
+          "txs": 2,
+        },
+      ]
+    }
+  />
+  <div
+    className="emotion-4"
+    id="Mobile"
+    items={
+      [
+        {
+          "hash": "D0243447726B8BD7AE94BF4F98E536A647959194E870AB8566CB833A3CC847F6",
+          "height": 379643,
+          "proposer": "desmosvaloper1h5f3dywec65v9qulxkmcv3e6yujyh3zm0ghhl3",
+          "timestamp": "2021-05-24T05:28:05.839448",
+          "txs": 2,
+        },
+      ]
+    }
+  />
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth emotion-5"
+  />
+  <a
+    aria-label="see more blocks"
+    className="button emotion-6"
+    href="/blocks"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+  >
+    seeMore
+  </a>
+</div>
+`;

@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 a {
+  color: #4092CD;
+}
+
+.emotion-0 .button {
+  color: #414141;
+}
+
+.emotion-0 .button:hover {
+  cursor: pointer;
+}
+
+.emotion-1 {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media (max-width:1279.95px) {
+  .emotion-3 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-bottom-width: thin;
+}
+
+@media (min-width:1280px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-6 {
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width:1280px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+<div
+  className="emotion-0"
+  id="Box"
+>
+  <div
+    className="emotion-1"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h2 emotion-2"
+    >
+      latestTransactions
+    </h2>
+    <a
+      aria-label="see more txs"
+      className="button"
+      href="/transactions"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      seeMore
+    </a>
+  </div>
+  <div
+    className="emotion-3"
+    id="Desktop"
+    items={
+      [
+        {
+          "hash": "76nwV8zz8tLz97SBRXH6uwHvgHXtqJDLQfF66jZhQ857",
+          "height": 2000,
+          "messages": 0,
+          "success": true,
+          "timestamp": "2021-05-28T00:08:33.700487",
+          "type": [],
+        },
+      ]
+    }
+  />
+  <div
+    className="emotion-4"
+    id="Mobile"
+    items={
+      [
+        {
+          "hash": "76nwV8zz8tLz97SBRXH6uwHvgHXtqJDLQfF66jZhQ857",
+          "height": 2000,
+          "messages": 0,
+          "success": true,
+          "timestamp": "2021-05-28T00:08:33.700487",
+          "type": [],
+        },
+      ]
+    }
+  />
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth emotion-5"
+  />
+  <a
+    aria-label="see more txs"
+    className="button emotion-6"
+    href="/transactions"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+  >
+    seeMore
+  </a>
+</div>
+`;

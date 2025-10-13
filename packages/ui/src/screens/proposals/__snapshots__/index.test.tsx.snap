@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: Proposals matches snapshot 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+@media (min-width: 1280px) {
+  .emotion-0 {
+    padding: 16px 24px;
+  }
+}
+
+.emotion-0 a {
+  color: #4092CD;
+}
+
+.emotion-1 {
+  height: 100%;
+}
+
+<div
+  className="emotion-0"
+  id="Layout"
+  navTitle="proposals"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      id="List"
+      isItemLoaded={[Function]}
+      itemCount={4}
+      items={
+        [
+          {
+            "description": "Update max validators",
+            "id": 7,
+            "status": "PROPOSAL_STATUS_REJECTED",
+            "title": "Staking Param Change Part Two",
+          },
+          {
+            "description": "software upgrade description",
+            "id": 6,
+            "status": "PROPOSAL_STATUS_INVALID",
+            "title": "upgrading the software",
+          },
+          {
+            "description": "Update max validators",
+            "id": 5,
+            "status": "PROPOSAL_STATUS_INVALID",
+            "title": "Staking Param Change",
+          },
+          {
+            "description": "My not so awesome proposal",
+            "id": 4,
+            "status": "PROPOSAL_STATUS_REJECTED",
+            "title": "BD Proposal",
+          },
+        ]
+      }
+      loadMoreItems={[Function]}
+      rawDataTotal={4}
+    />
+  </div>
+</div>
+`;

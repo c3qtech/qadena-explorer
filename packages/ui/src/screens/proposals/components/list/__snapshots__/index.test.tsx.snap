@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screen: Proposals/List matches snapshot 1`] = `
+.emotion-0 {
+  min-height: 500px;
+  height: 50vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 {
+    height: 100%;
+    min-height: 65vh;
+  }
+}
+
+@media (min-width:1280px) {
+  .emotion-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}
+
+.emotion-2 {
+  color: #777777;
+  text-align: right;
+}
+
+@media (min-width:1280px) {
+  .emotion-2 {
+    color: #414141;
+  }
+}
+
+.emotion-3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 {
+  margin: 16px 0px;
+}
+
+@media (min-width:1280px) {
+  .emotion-4 {
+    display: grid;
+    grid-template-columns: 50px auto min-content;
+    gap: 16px;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (min-width:1280px) {
+  .emotion-5 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  color: #777777;
+}
+
+@media (min-width:1280px) {
+  .emotion-7 {
+    display: none;
+  }
+}
+
+.emotion-8 {
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+  color: #E8E8E8;
+  background: rgba(232, 232, 232, 0.2);
+  color: #F17047;
+  background: rgba(241, 112, 71, 0.2);
+}
+
+.emotion-8:not(:last-child) {
+  margin-right: 8px;
+}
+
+.emotion-8 .MuiTypography-body1 {
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  margin: 0;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  letter-spacing: 0.5px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.emotion-10 {
+  margin-bottom: 4px;
+}
+
+.emotion-11 {
+  margin: 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  margin-bottom: 16px;
+}
+
+@media (max-width:1279.95px) {
+  .emotion-12 {
+    display: none;
+  }
+}
+
+.emotion-15 {
+  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #E8E8E8;
+  border-bottom-width: thin;
+}
+
+.emotion-20 {
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+  color: #E8E8E8;
+  background: rgba(232, 232, 232, 0.2);
+  color: #DA4B4B;
+  background: rgba(218, 75, 75, 0.2);
+}
+
+.emotion-20:not(:last-child) {
+  margin-right: 8px;
+}
+
+.emotion-20 .MuiTypography-body1 {
+  white-space: nowrap;
+}
+
+<div
+  className="emotion-0"
+  id="Box"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+      id="Total"
+      total="2"
+    />
+  </div>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="List"
+      onScroll={[Function]}
+      style={
+        {
+          "WebkitOverflowScrolling": "touch",
+          "direction": "ltr",
+          "height": 600,
+          "overflow": "auto",
+          "position": "relative",
+          "width": 600,
+          "willChange": "transform",
+        }
+      }
+    >
+      <div
+        style={
+          {
+            "height": 200,
+            "pointerEvents": undefined,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            {
+              "height": 100,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        >
+          <div>
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <h4
+                  className="MuiTypography-root MuiTypography-h4 emotion-6"
+                >
+                  #3
+                </h4>
+                <span
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 emotion-9"
+                    >
+                      passed
+                    </p>
+                  </div>
+                </span>
+              </div>
+              <div>
+                <div
+                  className="emotion-10"
+                >
+                  <a
+                    className="value"
+                    href="/proposals/3"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    Staking Param Change Part Three
+                  </a>
+                </div>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 emotion-11"
+                >
+                  Update max validators
+                </p>
+              </div>
+              <span
+                className="emotion-12"
+              >
+                <div
+                  className="emotion-8"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 emotion-9"
+                  >
+                    passed
+                  </p>
+                </div>
+              </span>
+            </div>
+            <hr
+              className="MuiDivider-root MuiDivider-fullWidth emotion-15"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            {
+              "height": 100,
+              "left": 0,
+              "position": "absolute",
+              "right": undefined,
+              "top": 100,
+              "width": "100%",
+            }
+          }
+        >
+          <div>
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <h4
+                  className="MuiTypography-root MuiTypography-h4 emotion-6"
+                >
+                  #7
+                </h4>
+                <span
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-20"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 emotion-9"
+                    >
+                      rejected
+                    </p>
+                  </div>
+                </span>
+              </div>
+              <div>
+                <div
+                  className="emotion-10"
+                >
+                  <a
+                    className="value"
+                    href="/proposals/7"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    Staking Param Change Part Two
+                  </a>
+                </div>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 emotion-11"
+                >
+                  Update max validators
+                </p>
+              </div>
+              <span
+                className="emotion-12"
+              >
+                <div
+                  className="emotion-20"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 emotion-9"
+                  >
+                    rejected
+                  </p>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`screen: Proposals/List matches snapshot with empty proposal list 1`] = `
+.emotion-0 {
+  min-height: 500px;
+  height: 50vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 {
+    height: 100%;
+    min-height: 65vh;
+  }
+}
+
+@media (min-width:1280px) {
+  .emotion-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}
+
+.emotion-2 {
+  color: #777777;
+  text-align: right;
+}
+
+@media (min-width:1280px) {
+  .emotion-2 {
+    color: #414141;
+  }
+}
+
+.emotion-3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="emotion-0"
+  id="Box"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+      id="Total"
+      total="0"
+    />
+  </div>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="List"
+      onScroll={[Function]}
+      style={
+        {
+          "WebkitOverflowScrolling": "touch",
+          "direction": "ltr",
+          "height": 600,
+          "overflow": "auto",
+          "position": "relative",
+          "width": 600,
+          "willChange": "transform",
+        }
+      }
+    >
+      <div
+        style={
+          {
+            "height": 0,
+            "pointerEvents": undefined,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
