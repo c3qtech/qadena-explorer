@@ -19,6 +19,14 @@ const { extra, votingPowerTokenUnit } = chainConfig();
 // Parse data
 // ==========================
 const formatValidators = (data: ValidatorsQuery): Partial<ValidatorsState> => {
+  console.log('🚀 formatValidators CALLED with data:', data);
+  console.log('🚀 data.validator length:', data?.validator?.length || 0);
+  
+  // Force visible debugging - this will show in the UI if our function runs
+  if (typeof window !== 'undefined') {
+    window.document.title = `DEBUG: formatValidators called with ${data?.validator?.length || 0} validators`;
+  }
+  
   const slashingParams = SlashingParams.fromJson(data?.slashingParams?.[0]?.params ?? {});
   const votingPowerOverall =
     numeral(
@@ -30,8 +38,23 @@ const formatValidators = (data: ValidatorsQuery): Partial<ValidatorsState> => {
   let formattedItems: ValidatorType[] = data.validator
     .filter((x) => x.validatorInfo)
     .map((x) => {
-      const votingPower =
-        (x?.validatorVotingPowers?.[0]?.votingPower ?? 0) / 10 ** (extra.votingPowerExponent ?? 0);
+      const votingPowerRaw = x?.validatorVotingPowers?.[0]?.votingPower ?? 0;
+      console.log('🔍 DEBUG - votingPowerRaw:', votingPowerRaw);
+      
+      const formattedToken = formatToken(votingPowerRaw, votingPowerTokenUnit);
+      console.log('🔍 DEBUG - formattedToken:', formattedToken);
+      console.log('🔍 DEBUG - votingPowerTokenUnit:', votingPowerTokenUnit);
+      
+      const numeralResult = numeral(formattedToken.value);
+      console.log('🔍 DEBUG - numeralResult:', numeralResult);
+      
+      const votingPower = numeralResult.value() ?? 0;
+      console.log('🔍 DEBUG - final votingPower:', votingPower);
+      
+      // Alternative debugging methods
+      if (typeof window !== 'undefined') {
+        window.console.log('🌐 WINDOW DEBUG - votingPower:', votingPower);
+      }
       const votingPowerPercent = votingPowerOverall
         ? numeral((votingPower / votingPowerOverall) * 100).value()
         : 0;
@@ -80,6 +103,8 @@ const formatValidators = (data: ValidatorsQuery): Partial<ValidatorsState> => {
 };
 
 export const useValidators = () => {
+  console.log('🎯 useValidators hook initialized');
+  
   const [search, setSearch] = useState('');
   const [state, setState] = useState<ValidatorsState>({
     loading: true,
@@ -106,13 +131,17 @@ export const useValidators = () => {
   // ==========================
   useValidatorsQuery({
     onCompleted: (data) => {
+      console.log('✅ useValidatorsQuery onCompleted triggered');
+      console.log('✅ Query data received:', data);
       handleSetState((prevState) => ({
         ...prevState,
         loading: false,
         ...formatValidators(data),
       }));
     },
-    onError: () => {
+    onError: (error: any) => {
+      console.log('❌ useValidatorsQuery onError triggered');
+      console.log('❌ Query error:', error);
       handleSetState((prevState) => ({
         ...prevState,
         loading: false,

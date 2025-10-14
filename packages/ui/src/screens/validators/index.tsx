@@ -5,6 +5,7 @@ import List from '@/screens/validators/components/list';
 import useStyles from '@/screens/validators/styles';
 
 const Validators = () => {
+  console.log('🏛️ Main Validators screen rendered');
   const { t } = useAppTranslation('validators');
   const { classes } = useStyles();
   return (

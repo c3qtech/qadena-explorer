@@ -12,6 +12,7 @@ import useStyles from '@/screens/validators/components/list/styles';
 import { useDisplayStyles } from '@/styles/useSharedStyles';
 
 const List: FC<ComponentDefault> = ({ className }) => {
+  console.log('📋 Validators List component rendered');
   const { classes, cx } = useStyles();
   const display = useDisplayStyles().classes;
   const { state, handleTabChange, handleSearch, handleSort, sortItems, search } = useValidators();
