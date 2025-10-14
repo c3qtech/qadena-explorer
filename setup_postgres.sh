@@ -32,7 +32,7 @@ echo "✅ All schema scripts executed successfully."
 
 docker compose up hasura -d
 
-sleep 5
+sleep 10
 
 cd bdjuno/hasura
 

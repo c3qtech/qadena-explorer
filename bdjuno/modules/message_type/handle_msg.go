@@ -1,15 +1,18 @@
 package message_type
 
 import (
+	"fmt"
+
 	utils "github.com/forbole/callisto/v4/modules/utils"
 	msgtypes "github.com/forbole/callisto/v4/types"
 
-	"github.com/forbole/juno/v6/types"
+	juno "github.com/forbole/juno/v6/types"
 )
 
 // HandleMsg represents a message handler that stores the given message inside the proper database table
 func (m *Module) HandleMsg(
-	index int, msg types.Message, tx *types.Transaction) error {
+	index int, msg juno.Message, tx *juno.Transaction) error {
+	fmt.Println("XXXXXXXXXXXXXXXXX msg", msg)
 	// Save message type
 	err := m.db.SaveMessageType(msgtypes.NewMessageType(
 		msg.GetType(),

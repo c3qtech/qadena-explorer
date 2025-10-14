@@ -13,7 +13,7 @@ all: lint build test-unit
 ###                                Build flags                              ###
 ###############################################################################
 
-LD_FLAGS = -X github.com/forbole/juno/v6/cmd.Version=$(VERSION) \
+LD_FLAGS = -X github.com/forbole/v/v6/cmd.Version=$(VERSION) \
 	-X github.com/forbole/juno/v6/cmd.Commit=$(COMMIT)
 BUILD_FLAGS :=  -ldflags '$(LD_FLAGS)'
 
@@ -33,10 +33,10 @@ BUILD_FLAGS :=  -ldflags '$(LD_FLAGS)' -tags "$(build_tags)"
 build: go.sum
 ifeq ($(OS),Windows_NT)
 	@echo "building callisto binary..."
-	@go build -mod=readonly $(BUILD_FLAGS) -o build/callisto.exe ./cmd/callisto
+	@go build -mod=vendor $(BUILD_FLAGS) -o build/callisto.exe ./cmd/callisto
 else
 	@echo "building callisto binary..."
-	@go build -mod=readonly $(BUILD_FLAGS) -o build/callisto ./cmd/callisto
+	@go build -mod=vendor $(BUILD_FLAGS) -o build/callisto ./cmd/callisto
 endif
 .PHONY: build
 
@@ -46,7 +46,7 @@ endif
 
 install: go.sum
 	@echo "installing callisto binary..."
-	@go install -mod=readonly $(BUILD_FLAGS) ./cmd/callisto
+	@go install -mod=vendor $(BUILD_FLAGS) ./cmd/callisto
 .PHONY: install
 
 ###############################################################################
