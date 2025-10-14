@@ -12,7 +12,11 @@ const { tokenUnits } = chainConfig();
  * @returns TokenUnit
  */
 export const formatToken = (value: number | string | null | undefined, denom = ''): TokenUnit => {
+  console.log('🔧 formatToken called with:', { value, denom });
+  
   const selectedDenom = tokenUnits?.[denom];
+  console.log('🔧 selectedDenom:', selectedDenom);
+  console.log('🔧 tokenUnits:', tokenUnits);
 
   if (typeof value !== 'string' && typeof value !== 'number') {
     value = '0';
@@ -30,12 +34,24 @@ export const formatToken = (value: number | string | null | undefined, denom = '
   };
 
   if (!selectedDenom) {
+    console.log('🔧 No selectedDenom found, returning:', results);
     return results;
   }
 
-  const ratio = Big(10 ** selectedDenom.exponent);
-  results.value = !ratio.eq(0) ? Big(value).div(ratio).toFixed(selectedDenom.exponent) : '';
+  // Handle high precision tokens (like 18 decimals) more carefully
+  const ratio = Big(10).pow(selectedDenom.exponent);
+  console.log('🔧 ratio (10^' + selectedDenom.exponent + '):', ratio.toString());
+  
+  const divResult = Big(value).div(ratio);
+  console.log('🔧 Big(value).div(ratio):', divResult.toString());
+  
+  // For high precision tokens, limit the decimal places to prevent precision issues
+  const maxDecimals = selectedDenom.exponent > 12 ? 6 : selectedDenom.exponent;
+  results.value = !ratio.eq(0) ? divResult.toFixed(maxDecimals) : '';
+  console.log('🔧 final results.value (limited to ' + maxDecimals + ' decimals):', results.value);
+  
   results.displayDenom = selectedDenom.display;
+  console.log('🔧 final results:', results);
   return results;
 };
 
@@ -55,8 +71,10 @@ export const formatTokenByExponent = (value: number | string | undefined, expone
     value = `${value}`;
   }
 
-  const ratio = Big(10 ** exponent);
-  const results = !ratio.eq(0) ? Big(value).div(ratio).toFixed(exponent) : '';
+  const ratio = Big(10).pow(exponent);
+  // For high precision tokens, limit the decimal places to prevent precision issues
+  const maxDecimals = exponent > 12 ? 6 : exponent;
+  const results = !ratio.eq(0) ? Big(value).div(ratio).toFixed(maxDecimals) : '';
   return results;
 };
 

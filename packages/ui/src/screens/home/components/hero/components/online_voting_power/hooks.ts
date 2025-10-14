@@ -20,14 +20,31 @@ const initialState: OnlineVotingPowerState = {
 };
 
 const formatOnlineVotingPower = (data: OnlineVotingPowerQuery) => {
-  const votingPower = data?.validatorVotingPowerAggregate?.aggregate?.sum?.votingPower ?? 0;
+  const votingPowerRaw = data?.validatorVotingPowerAggregate?.aggregate?.sum?.votingPower ?? 0;
   const bonded = data?.stakingPool?.[0]?.bonded ?? 0;
   const activeValidators = data?.activeTotal?.aggregate?.count ?? 0;
+
+  console.log('🏛️ Online VP - votingPowerRaw:', votingPowerRaw);
+  console.log('🏛️ Online VP - bonded:', bonded);
+  console.log('🏛️ Online VP - votingPowerTokenUnit:', votingPowerTokenUnit);
+  
+  // Format both voting power and total voting power using the same token unit
+  const formattedVotingPower = formatToken(votingPowerRaw, votingPowerTokenUnit);
+  const formattedTotalVotingPower = formatToken(bonded, votingPowerTokenUnit);
+  
+  console.log('🏛️ Online VP - formattedVotingPower:', formattedVotingPower);
+  console.log('🏛️ Online VP - formattedTotalVotingPower:', formattedTotalVotingPower);
+  
+  const votingPower = numeral(formattedVotingPower.value).value() ?? 0;
+  const totalVotingPower = numeral(formattedTotalVotingPower.value).value() ?? 0;
+  
+  console.log('🏛️ Online VP - final votingPower:', votingPower);
+  console.log('🏛️ Online VP - final totalVotingPower:', totalVotingPower);
 
   return {
     activeValidators,
     votingPower,
-    totalVotingPower: numeral(formatToken(bonded, votingPowerTokenUnit).value).value() ?? 0,
+    totalVotingPower,
   };
 };
 
