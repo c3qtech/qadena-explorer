@@ -5,14 +5,16 @@ services:
     build:
       context: .
       target: runner
-    command: ["yarn", "workspace", "web-qadena", "dev"]
+      args:
+        PROJECT_NAME: ${PROJECT_NAME}
+    command: ["yarn", "workspace", "${PROJECT_NAME}", "dev"]
     env_file:
       - .env
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:
-      - "${PORT}:3001"
+      - "${PORT}:${PORT}"
     volumes:
       - .:/app
       - /app/node_modules
