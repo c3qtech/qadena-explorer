@@ -7,6 +7,7 @@ services:
       target: runner
       args:
         PROJECT_NAME: ${PROJECT_NAME}
+    user: "${UID:-1000}:${GID:-1000}"
     command: ["yarn", "workspace", "${PROJECT_NAME}", "dev"]
     env_file:
       - .env
@@ -18,7 +19,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-      - /app/.next
+      - /app/apps/web-qadena/node_modules
+      - /app/apps/web-qadena/.next
       - /app/.yarn
     networks:
       - app_network
