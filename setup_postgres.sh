@@ -31,7 +31,7 @@ sudo rm -rf postgres_data
 docker compose up postgres -d
 
 # wait until healthy
-while ! docker compose ps postgres | grep "healty"; do
+while ! docker compose ps postgres | grep "healthy"; do
     sleep 1
     echo "Waiting for postgres to start..."
 done
@@ -59,7 +59,7 @@ echo "✅ All schema scripts executed successfully."
 docker compose up hasura -d
 
 # wait until healthy
-while ! docker compose ps hasura | grep "healty"; do
+while ! docker compose ps hasura | grep "healthy"; do
     sleep 1
     echo "Waiting for hasura to start..."
 done
