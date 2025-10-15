@@ -46,15 +46,37 @@ export PGPASSWORD="password"
 
 SCHEMA_DIR="callisto/database/schema"
 
+# Check if schema directory exists
+if [ ! -d "$SCHEMA_DIR" ]; then
+    echo "❌ Schema directory $SCHEMA_DIR not found!"
+    exit 1
+fi
+
 # Find and sort all .sql files in the schema directory
-FILES=$(ls "$SCHEMA_DIR"/*.sql | sort)
+if ! ls "$SCHEMA_DIR"/*.sql 1> /dev/null 2>&1; then
+    echo "❌ No .sql files found in $SCHEMA_DIR"
+    exit 1
+fi
 
-for file in $FILES; do
-  echo "👉 Running SQL script $file..."
-  # echo the command that will be executed
-  echo "psql -h $HOST -p $PORT -U $USER -d $DB -f $file"
+echo "📁 Found SQL files in $SCHEMA_DIR:"
+ls "$SCHEMA_DIR"/*.sql
 
-  psql -h "$HOST" -p "$PORT" -U "$USER" -d "$DB" -f "$file"
+echo ""
+echo "🚀 Executing SQL schema files..."
+
+for file in "$SCHEMA_DIR"/*.sql; do
+  if [ -f "$file" ]; then
+    echo "👉 Running SQL script $(basename "$file")..."
+    echo "   Command: psql -h $HOST -p $PORT -U $USER -d $DB -f $file"
+    
+    if psql -h "$HOST" -p "$PORT" -U "$USER" -d "$DB" -f "$file"; then
+      echo "   ✅ Success"
+    else
+      echo "   ❌ Failed to execute $file"
+      exit 1
+    fi
+    echo ""
+  fi
 done
 
 echo "✅ All schema scripts executed successfully."

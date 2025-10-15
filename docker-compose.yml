@@ -42,10 +42,10 @@ services:
       - ./postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U root -d callisto"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
+      interval: 2s
+      timeout: 1s
+      retries: 30
+      start_period: 5s
     networks:
       - app_network
 
@@ -65,7 +65,8 @@ services:
       HASURA_GRAPHQL_DEV_MODE: "true"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
-      ACTION_BASE_URL: http://localhost:3000
+      HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
+      ACTION_BASE_URL: http://localhost:${PORT}
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8080/healthz || exit 1"]
       interval: 15s
