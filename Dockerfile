@@ -25,6 +25,7 @@ RUN apk add --no-cache \
 FROM starter AS builder
 
 ### First install the dependencies (as they change less often)
+
 COPY . .
 
 ## Setting up the environment variables for the docker container.

@@ -3,6 +3,12 @@
 # dependencies
 **/node_modules/
 
+# postgres data
+postgres_data/
+
+# callisto data
+callisto_data/
+
 # next.js generates its own .tsbuildinfo at .next/cache
 **/.tsbuildinfo
 **/.eslintcache
