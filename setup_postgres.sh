@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 set -euo pipefail
 
 # check if .env exists
@@ -30,7 +30,11 @@ sudo rm -rf postgres_data
 
 docker compose up postgres -d
 
-sleep 5
+# wait until healthy
+while ! docker compose ps postgres | grep "healty"; do
+    sleep 1
+    echo "Waiting for postgres to start..."
+done
 
 # Connection parameters
 HOST="localhost"
@@ -54,8 +58,13 @@ echo "✅ All schema scripts executed successfully."
 
 docker compose up hasura -d
 
-sleep 10
+# wait until healthy
+while ! docker compose ps hasura | grep "healty"; do
+    sleep 1
+    echo "Waiting for hasura to start..."
+done
 
+# set up hasura
 cd callisto/hasura
 
 # check if config.yaml exists, otherwise copy config.yaml.sample
@@ -63,7 +72,13 @@ if [ ! -f config.yaml ]; then
     echo "Creating config.yaml from sample..."
     cp config.yaml.sample config.yaml
     # Update the port number to use HASURA_PORT from .env
-    sed -i "s|http://localhost:8080|http://localhost:$HASURA_PORT|g" config.yaml
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS (BSD sed)
+        sed -i "" "s|http://localhost:8080|http://localhost:$HASURA_PORT|g" config.yaml
+    else
+        # Linux (GNU sed)
+        sed -i "s|http://localhost:8080|http://localhost:$HASURA_PORT|g" config.yaml
+    fi
     echo "✅ config.yaml created and updated with port $HASURA_PORT"
 fi
 
