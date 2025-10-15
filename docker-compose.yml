@@ -19,6 +19,7 @@ services:
       - .:/app
       - /app/node_modules
       - /app/.next
+      - /app/.yarn
     networks:
       - app_network
     depends_on:
