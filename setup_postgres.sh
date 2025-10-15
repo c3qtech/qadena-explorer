@@ -10,7 +10,7 @@ fi
 docker compose down hasura
 docker compose down postgres
 
-sudo rm -rf postgres_data/*
+sudo rm -rf postgres_data
 
 docker compose up postgres -d
 
