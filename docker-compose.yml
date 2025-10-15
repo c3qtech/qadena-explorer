@@ -76,12 +76,12 @@ services:
       - app_network
 
   callisto:
-    image: golang:1.21-alpine
+    image: golang:1.23-alpine
     container_name: callisto
     working_dir: /app
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    command: sh -c "apk add --no-cache git make && GOFLAGS=-mod=vendor make build && ./build/callisto start --home /data"
+    command: sh -c "apk add --no-cache make && GOFLAGS=-mod=vendor make build && ./build/callisto start --home /data"
     restart: always
     depends_on:
       postgres:
