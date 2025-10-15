@@ -69,6 +69,8 @@ fi
 
 hasura metadata apply --endpoint http://localhost:$HASURA_PORT --admin-secret password
 
+cd ../..
+
 # shut down hasura and postgres
 docker compose down hasura
 docker compose down postgres
