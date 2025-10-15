@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# check if psql is installed, otherwise give instrutions
+if ! command -v psql &> /dev/null; then
+    echo "psql could not be found. Please install it and try again."
+    echo "You can install it using the following command:"
+    echo "sudo apt-get install postgresql-client-common"
+    exit 1
+fi
+
 docker compose down hasura
 docker compose down postgres
 
