@@ -18,7 +18,9 @@ fi
 # check if hasura is installed, otherwise install
 if ! command -v hasura &> /dev/null; then
     echo "hasura could not be found. Please wait while I try to install it for you."
-    sudo apt-get install -y hasura
+    curl -L https://github.com/hasura/graphql-engine/releases/latest/download/cli-hasura-linux-amd64 -o hasura
+    chmod +x hasura
+    sudo mv hasura /usr/local/bin/
 fi
 
 docker compose down hasura
