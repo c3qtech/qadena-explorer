@@ -22,7 +22,7 @@ node:
     type: remote
     config:
         rpc:
-            client_name: bdjuno
+            client_name: callisto
             address: http://host.docker.internal:26657
             max_connections: 20
         grpc:

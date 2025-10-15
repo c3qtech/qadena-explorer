@@ -76,7 +76,7 @@ services:
       - app_network
 
   callisto:
-    image: golang:1.23-alpine
+    image: golang:1.21-alpine
     container_name: callisto
     working_dir: /app
     extra_hosts:
@@ -90,7 +90,7 @@ services:
       - DATABASE_URL=postgres://root:password@postgres:5432/callisto
       - GIT_DISCOVERY_ACROSS_FILESYSTEM=1
     volumes:
-      - ./bdjuno:/app
+      - ./callisto:/app
       - ./callisto_data:/data
     networks:
       - app_network

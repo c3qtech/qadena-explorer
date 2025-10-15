@@ -40,7 +40,7 @@ DB="callisto"
 # You can set PGPASSWORD in the environment before running this script
 export PGPASSWORD="password"
 
-SCHEMA_DIR="bdjuno/database/schema"
+SCHEMA_DIR="callisto/database/schema"
 
 # Find and sort all .sql files in the schema directory
 FILES=$(ls "$SCHEMA_DIR"/*.sql | sort)
@@ -56,7 +56,7 @@ docker compose up hasura -d
 
 sleep 10
 
-cd bdjuno/hasura
+cd callisto/hasura
 
 # check if config.yaml exists, otherwise copy config.yaml.sample
 if [ ! -f config.yaml ]; then
