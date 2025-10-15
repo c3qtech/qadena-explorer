@@ -1,10 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# check if psql is installed, otherwise give instrutions
+# check if .env exists
+if [ ! -f .env ]; then
+    echo "No .env file found. Please create one and try again. (check env.sample)"
+    exit 1
+fi
+
+source .env
+
+# check if psql is installed, otherwise install
 if ! command -v psql &> /dev/null; then
     echo "psql could not be found. Please wait while I try to install it for you."
     sudo apt-get install -y postgresql-client
+fi
+
+# check if hasura is installed, otherwise install
+if ! command -v hasura &> /dev/null; then
+    echo "hasura could not be found. Please wait while I try to install it for you."
+    sudo apt-get install -y hasura
 fi
 
 docker compose down hasura
@@ -42,7 +56,6 @@ sleep 10
 
 cd bdjuno/hasura
 
-hasura metadata apply --endpoint http://localhost:8080 --admin-secret password
+hasura metadata apply --endpoint http://localhost:$HASURA_PORT --admin-secret password
 
-docker logs hasura -f
 
