@@ -5,7 +5,7 @@ set -euo pipefail
 if ! command -v psql &> /dev/null; then
     echo "psql could not be found. Please install it and try again."
     echo "You can install it using the following command:"
-    echo "sudo apt-get install postgresql-client-common"
+    echo "sudo apt-get install postgresql-client"
     exit 1
 fi
 
