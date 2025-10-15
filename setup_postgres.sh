@@ -50,7 +50,10 @@ SCHEMA_DIR="callisto/database/schema"
 FILES=$(ls "$SCHEMA_DIR"/*.sql | sort)
 
 for file in $FILES; do
-  echo "👉 Running $file..."
+  echo "👉 Running SQL script $file..."
+  # echo the command that will be executed
+  echo "psql -h $HOST -p $PORT -U $USER -d $DB -f $file"
+
   psql -h "$HOST" -p "$PORT" -U "$USER" -d "$DB" -f "$file"
 done
 
