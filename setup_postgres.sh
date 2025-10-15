@@ -58,6 +58,15 @@ sleep 10
 
 cd bdjuno/hasura
 
+# check if config.yaml exists, otherwise copy config.yaml.sample
+if [ ! -f config.yaml ]; then
+    echo "Creating config.yaml from sample..."
+    cp config.yaml.sample config.yaml
+    # Update the port number to use HASURA_PORT from .env
+    sed -i "s|http://localhost:8080|http://localhost:$HASURA_PORT|g" config.yaml
+    echo "✅ config.yaml created and updated with port $HASURA_PORT"
+fi
+
 hasura metadata apply --endpoint http://localhost:$HASURA_PORT --admin-secret password
 
 
