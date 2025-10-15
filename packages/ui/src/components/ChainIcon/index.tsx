@@ -44,6 +44,8 @@ import gitopiaIconDark from 'shared-utils/assets/icons/gitopia-both.svg?url';
 import neutronIconBoth from 'shared-utils/assets/icons/neutron-both.svg?url';
 import jackalIconBoth from 'shared-utils/assets/icons/jackal-both.svg?url';
 import archwayIconBoth from 'shared-utils/assets/icons/archway-both.svg?url';
+import qadenaIcon from 'shared-utils/assets/icons/qadena.png?url'
+import qadenaLogo from 'shared-utils/assets/logos/qadena-logo.png?url'
 import agoricLogoLight from 'shared-utils/assets/logos/agoric-light.png';
 import akashLogoDark from 'shared-utils/assets/logos/akash-dark.svg?url';
 import assetmantleLogoDark from 'shared-utils/assets/logos/assetmantle-dark.svg?url';
@@ -298,7 +300,7 @@ const ChainIcon = ({
       break;
     case 'qadena':
       [iconDark, iconLight] =
-        type === 'icon' ? [archwayIconBoth, archwayIconBoth] : [archwayLogoDark, archwayLogoLight];
+        type === 'icon' ? [qadenaIcon, qadenaIcon] : [qadenaLogo, qadenaLogo];
       break;
     default:
       throw new Error(`chain ${chainName} not supported`);

@@ -11,7 +11,13 @@ ARG PROJECT_NAME=web
 # Stage: starter
 FROM ${BASE_IMAGE} AS starter
 WORKDIR /app
-RUN npm i -g turbo
+
+# Install build dependencies for native modules
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    && npm i -g turbo
 
 ################################################################################
 

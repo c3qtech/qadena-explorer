@@ -6,6 +6,10 @@ node_modules/
 # postgres_data
 postgres_data/
 
+# callisto_data
+callisto_data/genesis.json
+callisto_data/config.yaml
+
 # next.js generates its own .tsbuildinfo at .next/cache
 **/.tsbuildinfo
 .eslintcache
