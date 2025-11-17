@@ -12,6 +12,7 @@ source .env
 # check if psql is installed, otherwise install
 if ! command -v psql &> /dev/null; then
     echo "psql could not be found. Please wait while I try to install it for you."
+    echo "This needs sudo permissions."
     sudo apt-get install -y postgresql-client
 fi
 
@@ -20,13 +21,22 @@ if ! command -v hasura &> /dev/null; then
     echo "hasura could not be found. Please wait while I try to install it for you."
     curl -L https://github.com/hasura/graphql-engine/releases/latest/download/cli-hasura-linux-amd64 -o hasura
     chmod +x hasura
+    echo "This needs sudo permissions."
     sudo mv hasura /usr/local/bin/
 fi
 
 docker compose down hasura
 docker compose down postgres
 
-sudo rm -rf postgres_data
+# Remove postgres_data directory (may need sudo if owned by postgres container user)
+if [ -d postgres_data ]; then
+    if rm -rf postgres_data 2>/dev/null; then
+        echo "✅ Removed postgres_data directory"
+    else
+        echo "🔒 postgres_data requires elevated permissions, using sudo..."
+        sudo rm -rf postgres_data
+    fi
+fi
 
 docker compose up postgres -d
 
